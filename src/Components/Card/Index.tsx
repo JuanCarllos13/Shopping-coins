@@ -9,7 +9,6 @@ import {
 	PackageText,
 	UnitText,
 } from './styles'
-import MacBook from '@assets/macbook.png'
 import { View } from 'react-native'
 import { ButtonIcon } from '@Components/ButtonIcon'
 import { Car } from 'phosphor-react-native'
