@@ -6,7 +6,7 @@ import { useTheme } from 'styled-components/native'
 
 import { House, Bag, User } from 'phosphor-react-native'
 import { Profile } from '@Screens/Profile'
-import { Shop } from '@Screens/Shop'
+import { ShopScreen } from '@Screens/Shop'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
@@ -42,7 +42,7 @@ export function AppTabRoutes() {
 
 			<Screen
 				name="Bag"
-				component={Shop}
+				component={ShopScreen}
 				options={{
 					tabBarLabelStyle: { fontSize: 16, color: 'white' },
 					tabBarIcon: ({ color }) => (

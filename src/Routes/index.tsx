@@ -9,6 +9,8 @@ import { AppRoutes } from './app.routes'
 
 export function Routes() {
 	const { user } = useContext(AuthContext)
+
+	console.log('user', user)
 	const insets = useSafeAreaInsets()
 	return (
 		<NavigationContainer>

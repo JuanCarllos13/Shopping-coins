@@ -7,6 +7,7 @@ import React, { createContext, useState, useEffect, ReactNode } from 'react'
 
 import Toast from 'react-native-toast-message'
 import { Loading } from '@Components/Loading'
+import { storageBiometryGet } from 'src/Storage/Biometria'
 
 interface AuthContextData {
 	user: UserProps | null
@@ -181,6 +182,8 @@ function AuthProvider({ children }: AuthProviderProps) {
 	async function SignOut() {
 		await auth().signOut()
 		setUser(null)
+
+		console.log('entrou aqui', user)
 	}
 
 	useEffect(() => {
@@ -194,8 +197,11 @@ function AuthProvider({ children }: AuthProviderProps) {
 				if (userSnapshot.exists) {
 					const userData = userSnapshot.data() as UserProps
 
+					const biometry = await storageBiometryGet()
+
 					const compatible = await LocalAuthentication.hasHardwareAsync()
-					if (compatible) {
+
+					if (compatible && biometry) {
 						const biometriaRecord = await LocalAuthentication.isEnrolledAsync()
 						if (!biometriaRecord) {
 							alert('Biometria não cadastrada')

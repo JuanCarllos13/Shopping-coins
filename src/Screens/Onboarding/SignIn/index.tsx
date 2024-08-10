@@ -88,6 +88,7 @@ export function SignIn() {
 						<TextFooter>Resetar senha</TextFooter>
 					</TouchableOpacity>
 				</Footer>
+
 			</Content>
 		</Container>
 	)

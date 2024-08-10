@@ -35,6 +35,7 @@ export default {
 		GRAY_900: '#080808',
 		GRAY_950: '#313131',
 		GRAY_960: '#202020',
+		GRAY_1000: '#0000000F'
 	},
 	FONT_FAMILY: {
 		REGULAR: 'Sora_400Regular',

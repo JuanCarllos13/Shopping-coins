@@ -1,4 +1,4 @@
-export interface Shop {
+export interface ShopType {
 	id: string,
 	title: string,
 	description: string,

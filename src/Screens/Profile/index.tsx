@@ -1,21 +1,49 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Container, Content, Header, Photo, UserName } from './styles'
 import { Button } from '@Components/Button'
 import { useTheme } from 'styled-components'
 import { CardButtonInline } from '@Components/CardButtonInline'
 import { UserCircle, Bank, BookBookmark } from 'phosphor-react-native'
 import { useNavigation } from '@react-navigation/native'
+import { AuthContext } from '@Contexts/Auth'
+import { Alert } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 
 export function Profile() {
 	const theme = useTheme()
 	const navigation = useNavigation()
+	const { SignOut, user } = useContext(AuthContext)
+
+
+	async function handleSignOut() {
+		Alert.alert(
+			'Atenção!',
+			'Você deseja sair da conta?',
+			[
+				{
+					text: 'Cancelar',
+					style: 'cancel',
+				},
+				{
+					text: 'Sair',
+					onPress: () => {
+						SignOut()
+					},
+				},
+			],
+		)
+	}
 
 	return (
 		<Container>
 			<Header>
-				<Photo source={{ uri: 'https://github.com/juanCarllos13.png' }} />
+				{ user?.photoUrl ? (
+					<Photo source={{ uri:  user?.photoUrl }} />
+				) : (
+					<Ionicons name="person" size={84} color={theme.COLORS.WHITE} />
+				)}
 
-				<UserName>Juan</UserName>
+				<UserName>{user?.displayName}</UserName>
 
 				<Button
 					text="Editar Perfil"
@@ -31,6 +59,12 @@ export function Profile() {
 
 				<CardButtonInline icon={Bank} text="Detalhes da Conta" />
 				<CardButtonInline icon={BookBookmark} text="Histórico" />
+
+				<Button
+					text="Sair"
+					color={theme.COLORS.PURPLE_DARK}
+					onPress={handleSignOut}
+				/>
 			</Content>
 		</Container>
 	)

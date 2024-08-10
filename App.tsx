@@ -19,7 +19,7 @@ import OneSignal from 'react-native-onesignal'
 
 WebBrowser.maybeCompleteAuthSession()
 
-OneSignal.setAppId('eeed8d07-1414-47e3-a7c6-8845b770cf90')
+OneSignal.setAppId('e5b27b34-11ba-4dbe-8557-23554f52d603')
 
 export default function App() {
 	const [fontsLoaded] = useFonts({

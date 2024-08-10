@@ -11,19 +11,21 @@ import {
 } from './styles'
 import { View } from 'react-native'
 import { ButtonIcon } from '@Components/ButtonIcon'
-import { Car } from 'phosphor-react-native'
-import { Shop } from 'src/DTOs/ShopDTO'
+import { ShoppingCartSimple } from 'phosphor-react-native'
+import { ShopType } from 'src/DTOs/ShopDTO'
 
 interface CardProps {
-	data: Shop
+	data: ShopType
 	onPress: () => void
+	isLoading?: boolean
+	checked?: boolean
 }
 
-export function Card({data, onPress}: CardProps) {
+export function Card({ data, onPress, isLoading, checked }: CardProps) {
 	return (
 		<Container>
 			<BoxImage>
-				<Image source={data?.image} />
+				<Image source={data?.image ?? ''} />
 			</BoxImage>
 
 			<BoxInfos>
@@ -38,7 +40,12 @@ export function Card({data, onPress}: CardProps) {
 						<MoneyText size={18}>{data?.price}</MoneyText>
 					</View>
 
-					<ButtonIcon icon={Car} onPress={onPress}/>
+					<ButtonIcon
+						icon={ShoppingCartSimple}
+						onPress={onPress}
+						isLoading={isLoading}
+						checked={checked}
+					/>
 				</BoxMoney>
 			</BoxInfos>
 		</Container>
