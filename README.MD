@@ -31,7 +31,7 @@ $ git clone https://github.com/JuanCarllos13/Shopping-coins
 # Navegue até a pasta
 
 # Instale as dependências
-$ yarn
+$ npx expo install
 
 # Execute o comando
 $ npx expo run:android
