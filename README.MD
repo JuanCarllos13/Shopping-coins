@@ -18,7 +18,7 @@
 ```
 # Clone do repositório
 Faça o clone da aplicação
-$ git clone https://github.com/JuanCarllos13/Daily-Diet
+$ git clone https://github.com/JuanCarllos13/Shopping-coins
 ```
 
 ## Rodando o projeto mobile
