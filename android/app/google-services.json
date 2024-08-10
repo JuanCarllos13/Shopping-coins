@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "707301454979",
+    "project_id": "shopping-coins",
+    "storage_bucket": "shopping-coins.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707301454979:android:e8785f34ba4b1416acd7b6",
+        "android_client_info": {
+          "package_name": "com.juancarllos13.shoppingcoins"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSx0EzJAemFkg_MgMMZZ92AtViMz8DqKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

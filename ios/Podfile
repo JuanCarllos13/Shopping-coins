@@ -15,6 +15,8 @@ prepare_react_native_project!
 
 target 'shoppingcoins' do
   use_expo_modules!
+  use_frameworks! :linkage => :static  # Aqui está a linha inserida
+
   config = use_native_modules!
 
   use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
@@ -40,12 +42,12 @@ target 'shoppingcoins' do
     # when building for devices.
     installer.target_installation_results.pod_target_installation_results
       .each do |pod_name, target_installation_result|
-      target_installation_result.resource_bundle_targets.each do |resource_bundle_target|
-        resource_bundle_target.build_configurations.each do |config|
-          config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        target_installation_result.resource_bundle_targets.each do |resource_bundle_target|
+          resource_bundle_target.build_configurations.each do |config|
+            config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+          end
         end
       end
-    end
   end
 
   post_integrate do |installer|
