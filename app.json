@@ -14,10 +14,10 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.juancarllos13.shopping-coins",
-			"googleServicesFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
-			"googleServicesFile": "./google-services.json",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#7B22D3"
@@ -29,7 +29,30 @@
     },
     "plugins": [
       "expo-font",
-			"@react-native-firebase/app"
-    ]
+      "@react-native-firebase/app",
+      "onesignal-expo-plugin"
+    ],
+		"extra": {
+			"eas": {
+				"projectId": "a796bf9e-aedb-4e1d-8812-204fd71d1053",
+				"build": {
+					"experimental": {
+						"ios": {
+							"appExtensions": [
+								{
+									"targetName": "OneSignalNotificationServiceExtension",
+									"bundleIdentifier": "com.juancarllos13.shoppingcoins.OneSignalNotificationServiceExtension",
+									"entitlements": {
+										"com.apple.security.application-groups": [
+											"group.com.juancarllos13.shoppingcoins.onesignal"
+										]
+									}
+								}
+							]
+						}
+					}
+				}
+			}
+		}
   }
 }

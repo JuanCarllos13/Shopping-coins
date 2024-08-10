@@ -4,9 +4,11 @@ import { Button } from '@Components/Button'
 import { useTheme } from 'styled-components'
 import { CardButtonInline } from '@Components/CardButtonInline'
 import { UserCircle, Bank, BookBookmark } from 'phosphor-react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export function Profile() {
 	const theme = useTheme()
+	const navigation = useNavigation()
 
 	return (
 		<Container>
@@ -15,7 +17,13 @@ export function Profile() {
 
 				<UserName>Juan</UserName>
 
-				<Button text="Editar Perfil" color={theme.COLORS.GRAY_950} />
+				<Button
+					text="Editar Perfil"
+					color={theme.COLORS.GRAY_950}
+					onPress={() =>
+						navigation.navigate('SettingsRoutes', { screen: 'EditDada' })
+					}
+				/>
 			</Header>
 
 			<Content>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import {
@@ -13,6 +13,13 @@ import { TopMessage } from '@Components/TopMessage'
 import { WifiSlash } from 'phosphor-react-native'
 import themes from './src/Theme'
 import { Routes } from '@Routes/index'
+import { AuthProvider } from '@Contexts/Auth'
+import * as WebBrowser from 'expo-web-browser'
+import OneSignal from 'react-native-onesignal'
+
+WebBrowser.maybeCompleteAuthSession()
+
+OneSignal.setAppId('eeed8d07-1414-47e3-a7c6-8845b770cf90')
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -21,6 +28,17 @@ export default function App() {
 	})
 
 	const netInfo = useNetInfo()
+
+
+	useEffect(() => {
+		const unuSubscribe = OneSignal.setNotificationOpenedHandler((response) => {
+			if (response.action) {
+				return
+			}
+		})
+		return () => unuSubscribe
+	}, [])
+
 
 	if (!fontsLoaded) {
 		return <Loading />
@@ -36,7 +54,9 @@ export default function App() {
 					<TopMessage title="Você está off-line" icon={WifiSlash} />
 				)}
 
-				<Routes />
+				<AuthProvider>
+					<Routes />
+				</AuthProvider>
 			</SafeAreaProvider>
 		</ThemeProvider>
 	)

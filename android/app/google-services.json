@@ -12,7 +12,20 @@
           "package_name": "com.juancarllos13.shoppingcoins"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "707301454979-03vn78dslmamr35vs82r7jcckrl5f64f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juancarllos13.shoppingcoins",
+            "certificate_hash": "fce4d7feb9e1c58d74d8f4b53fc571ff13b5d303"
+          }
+        },
+        {
+          "client_id": "707301454979-9av433qi4g1acdbg2fn29abn8q4plgub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCSx0EzJAemFkg_MgMMZZ92AtViMz8DqKQ"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707301454979-9av433qi4g1acdbg2fn29abn8q4plgub.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "707301454979-b8lriha2acagg73187muf0bmagctp8te.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.juancarllos13.shopping-coins"
+              }
+            }
+          ]
         }
       }
     }

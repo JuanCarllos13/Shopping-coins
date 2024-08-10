@@ -6,6 +6,9 @@ export declare global {
 			Home: undefined
 			Bag: undefined
 			Profile: undefined
+			SettingsRoutes: {
+				screen: 'EditDada'
+			}
 		}
 	}
 }
