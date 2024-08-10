@@ -13,12 +13,28 @@
   Desafio da empresa Preço justo
 </h4>
 
-## ❓ O que é ?
+#  Como rodar
 
-Este é um repositório no qual se encontra a parte Front-end de uma aplicação. Faço um clone desse Repositório e der o comando "yarn" para instalar todas os pacotes e dependências do projeto, em seguindo um "npx expo run:android" para executar o projeto.
-Caso der erro de "INSTALL_FAILED_INSUFFICIENT_STORAGE" aumente a memoria do seu emulador e rode a aplicação de novo
+```
+# Clone do repositório
+Faça o clone da aplicação
+$ git clone https://github.com/JuanCarllos13/Daily-Diet
+```
 
-<hr>
+## Rodando o projeto mobile
+
+```
+# Para rodar aplicação mobile, será necessário o EXPO
+
+# Navegue até a pasta
+
+# Instale as dependências
+$ yarn
+
+# Execute o comando
+$ npx expo run:android
+```
+
 
 
 ## 💼 Tecnologias utilizadas
