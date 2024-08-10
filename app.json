@@ -14,7 +14,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.juancarllos13.shopping-coins",
-			"googleServicesFile": "./GoogleService-Info.plist",
+			"googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
 			"googleServicesFile": "./google-services.json",
@@ -28,18 +28,7 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font",
-			"@react-native-firebase/app",
-      "@react-native-firebase/auth",
-      "@react-native-firebase/crashlytics",
-      [
-        "expo-build-properties",
-        {
-          "ios": {
-            "useFrameworks": "static"
-          }
-        }
-      ]
+      "expo-font"
     ]
   }
 }
