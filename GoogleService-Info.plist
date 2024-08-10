@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBJlyLu0PYenJAXEpNeRnk8riz2Hdznybk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>707301454979</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.juancarllos13.shopping-coins</string>
+	<key>PROJECT_ID</key>
+	<string>shopping-coins</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shopping-coins.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:707301454979:ios:2d73fb6ce802d54aacd7b6</string>
+</dict>
+</plist>
